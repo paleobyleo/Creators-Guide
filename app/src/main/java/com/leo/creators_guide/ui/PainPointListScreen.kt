@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import com.leo.creators_guide.data.PainPoint
 import com.leo.creators_guide.data.PainPointRepository
 import com.leo.creators_guide.data.CostDetails
+import com.leo.creators_guide.ui.UpdateNotification
 import java.util.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,6 +43,19 @@ fun PainPointListScreen() {
             .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Update notification
+        var showUpdateNotification by remember { mutableStateOf(true) }
+        
+        if (showUpdateNotification) {
+            UpdateNotification(
+                onDismiss = { showUpdateNotification = false },
+                onUpdate = { 
+                    // In a real app, this would open the download URL
+                    showUpdateNotification = false
+                }
+            )
+        }
+        
         // Centered header text
         Text(
             text = "Creator's Pain Points & Solutions (GUIDE)",

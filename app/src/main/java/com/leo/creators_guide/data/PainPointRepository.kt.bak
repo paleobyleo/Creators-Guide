@@ -1,5 +1,7 @@
 package com.leo.creators_guide.data
 
+import com.leo.creators_guide.data.CostDetails
+
 object PainPointRepository {
     fun getPainPoints(): List<PainPoint> {
         return listOf(
@@ -115,24 +117,4 @@ object PainPointRepository {
             PainPoint(87, "Customer Support", "Providing timely support to all my customers is time-consuming.", 8, "Create comprehensive FAQ documentation, implement chatbots for common questions, use canned responses for frequent issues, and establish clear response time expectations.", "$0-200/month", "Includes time spent on support activities valued at $20-50/hour. FAQ tools and chatbot platforms may cost $0-100/month.", CostDetails(monthlyCost = "$0-200/month", oneTimeCost = null, annualCost = null, freeTier = "Basic FAQ tools and chatbots included", premiumTier = "Advanced support automation $200-800/month", implementationTime = "1-2 weeks", requiredSkills = listOf("Customer service", "Documentation"), toolsAndPlatforms = listOf("Zendesk", "Help Scout", "Intercom"), ongoingMaintenance = "$20-80/month for updates")),
             PainPoint(88, "Customer Support", "Handling difficult customers and complaints is emotionally draining.", 7, "Develop empathy and active listening skills, set clear boundaries, have standard procedures for handling complaints, and remember that you can't please everyone while staying true to your values.", "$0-100/month", "Training resources and time investment in emotional resilience. Professional counseling may cost $50-150/session if needed.", CostDetails(monthlyCost = "$0-100/month", oneTimeCost = null, annualCost = null, freeTier = "Basic customer service training included", premiumTier = "Professional coaching $200-600/month", implementationTime = "Ongoing", requiredSkills = listOf("Conflict resolution", "Emotional intelligence"), toolsAndPlatforms = listOf("Customer service training platforms", "Meditation apps"), ongoingMaintenance = "$10-50/month for self-care")),
             PainPoint(89, "Customer Support", "Creating helpful documentation and FAQs is time-intensive.", 7, "Start with the most common questions, repurpose existing support responses, organize content logically, and continuously update based on new questions and feedback.", "$0-100/month", "Documentation tools and time spent on content creation. Professional technical writers cost $50-150/hour.", CostDetails(monthlyCost = "$0-100/month", oneTimeCost = null, annualCost = null, freeTier = "Basic documentation tools like Google Docs included", premiumTier = "Professional documentation $200-800/month", implementationTime = "2-3 weeks", requiredSkills = listOf("Technical writing", "Content organization"), toolsAndPlatforms = listOf("Notion", "Confluence", "GitBook"), ongoingMaintenance = "$20-50/month for updates")),
-            PainPoint(90, "Customer Support", "I struggle to provide support across multiple channels (email, chat, social).", 8, "Use unified inbox tools like Help Scout or Zendesk, establish response time standards for each channel, and consider focusing on the channels where your customers are most active.", "$50-300/month", "Unified inbox platforms charge based on seats and features. Basic plans start at $50/month for small teams.", CostDetails(monthlyCost = "$50-300/month", oneTimeCost = null, annualCost = null, freeTier = "Basic unified inbox included", premiumTier = "Advanced unified inbox $200-800/month", implementationTime = "1-2 weeks", requiredSkills = listOf("Customer support", "Multi-channel management"), toolsAndPlatforms = listOf("Zendesk", "Help Scout", "Front"), ongoingMaintenance = "$20-80/month for updates"))
-        )
-    }
-
-    fun getCategories(): List<String> {
-        return listOf(
-            "Payments",
-            "Retention",
-            "Analytics",
-            "Community",
-            "Automation",
-            "Upsells",
-            "Refunds",
-            "Content Creation",
-            "Marketing",
-            "Technical Issues",
-            "Time Management",
-            "Customer Support"
-        )
-    }
-}
+            PainPoint(90, "Customer Support", "I struggle to provide support across multiple channels (email, chat, social).", 8, "Use unified inbox tools like Help Scout or Zendesk, establish response time standards for each channel, and consider focusing on the channels where your customers are most active.", "$50-300/month", "Unified inbox platforms charge based on seats and features. Basic plans start at $50/month for small teams.", CostDetails(monthlyCost = "$50-300/month", oneTimeCost = null, annualCost = null, free
